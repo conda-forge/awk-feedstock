@@ -9,7 +9,7 @@ if [[ "${target_platform}" == linux-* ]]; then
 # If building for `osx-arm64` use `cc` for `HOSTCC` and `$CC` for `CC`.
 # This is because the `osx-arm64` build is cross-compiled from `osx_64`
 elif [[ "${target_platform}" == osx-arm64 ]]; then
-    make HOSTCC="cc -g -Wall -pedantic -Wcast-qual" CC="$CC -g -Wall -pedantic -Wcast-qual"
+    make HOSTCC="$CC_FOR_BUILD -g -Wall -pedantic -Wcast-qual" CC="$CC -g -Wall -pedantic -Wcast-qual"
 else
     make
 fi
