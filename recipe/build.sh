@@ -2,9 +2,9 @@
 
 set -xe
 
-# If running in Linux, set the `$HOSTCC` manually to
-# avoid calling the hardcoded `cc` command in the makefile
-if [[ "${target_platform}" == linux-* ]]; then
+# If running in Linux or osx-arm64 set the `$HOSTCC` manually
+# to avoid calling the hardcoded `cc` command in the makefile
+if [[ "${target_platform}" == linux-* || "${target_platform}" == osx-arm64 ]]; then
     make HOSTCC="$CC -g -Wall -pedantic -Wcast-qual"
 else
     make
