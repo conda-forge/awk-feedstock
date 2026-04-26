@@ -1,5 +1,5 @@
 {% set name = "awk" %}
-{% set version = "20250116" %}
+{% set version = "20260426" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/onetrueawk/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: e031b1e1d2b230f276f975bffb923f0ea15f798c839d15a3f26a1a39448e32d7
+  sha256: 7ae5b9fc6a8149bc45ea0ba3ba434a69a16d1460d19f6d01b6f04cc885b8e02b
 
 build:
   number: 0
